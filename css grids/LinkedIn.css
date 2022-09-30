@@ -1,0 +1,104 @@
+/* body {
+  background: silver;
+} */
+.container {
+  gap: 2px;
+  height: 100vh;
+  /* width: 100vh; */
+  display: grid;
+  grid-template:
+    'header header header header header' 50px
+    'whitespace profile postbar linknews whitespace1' 1fr
+    'whitespace analytics news-feed reccomended-courses whitespace1' 2fr
+    'whitespace recent news-feed friend-suggestion whitespace1' 100px /
+    1fr 100px 2fr 100px 1fr;
+}
+
+.header {
+  grid-area: header;
+  background-color: blue;
+}
+
+.whitespace {
+  grid-area: whitespace;
+  background-color: green;
+}
+.whitespace1 {
+  grid-area: whitespace1;
+  background-color: green;
+}
+.profile {
+  grid-area: profile;
+  background-color: brown;
+}
+.analytics {
+  grid-area: analytics;
+  background-color: aqua;
+}
+.recent {
+  grid-area: recent;
+  background-color: rgb(140, 140, 218);
+}
+.postbar {
+  grid-area: postbar;
+  background-color: rgb(205, 22, 80);
+}
+.news-feed {
+  grid-area: news-feed;
+  background-color: rgb(141, 215, 146);
+}
+.linknews {
+  grid-area: linknews;
+  background-color: rgb(255, 0, 242);
+}
+.reccomended-courses {
+  grid-area: reccomended-courses;
+  background-color: rgb(234, 255, 0);
+}
+.friend-suggestion {
+  grid-area: friend-suggestion;
+  background-color: rgb(196, 200, 151);
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    gap: 2px;
+    height: 100vh;
+    /* width: 100vh; */
+    display: grid;
+    grid-template:
+      'header header header header ' 50px
+      'whitespace profile postbar  whitespace1' 1fr
+      'whitespace analytics news-feed  whitespace1' 2fr
+      'whitespace recent news-feed  whitespace1' 100px /
+      1fr 100px 2fr 1fr;
+  }
+  .linknews .friend-suggestion .reccomended-courses {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    gap: 2px;
+    height: 100vh;
+    /* width: 100vh; */
+    display: grid;
+    grid-template:
+      'header  ' 50px
+      '  postbar  ' 1fr
+      '  news-feed  ' 2fr
+      'news-feed  ' 100px /
+      1fr;
+  }
+  .linknews
+    .friend-suggestion
+    .reccomended-courses
+    .whitespace
+    .whitespace1
+    .recent
+    .profile
+    .analytics {
+    display: none;
+  }
+}
