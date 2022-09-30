@@ -1,6 +1,3 @@
-/* body {
-  background: silver;
-} */
 .container {
   gap: 2px;
   height: 100vh;
@@ -64,7 +61,7 @@
   .container {
     gap: 2px;
     height: 100vh;
-    /* width: 100vh; */
+
     display: grid;
     grid-template:
       'header header header header ' 50px
@@ -73,7 +70,9 @@
       'whitespace recent news-feed  whitespace1' 100px /
       1fr 100px 2fr 1fr;
   }
-  .linknews .friend-suggestion .reccomended-courses {
+  .linknews,
+  .friend-suggestion,
+  .reccomended-courses {
     display: none;
   }
 }
@@ -82,23 +81,22 @@
   .container {
     gap: 2px;
     height: 100vh;
-    /* width: 100vh; */
+
     display: grid;
     grid-template:
       'header  ' 50px
-      '  postbar  ' 1fr
-      '  news-feed  ' 2fr
+      'postbar  ' 1fr
+      'news-feed  ' 2fr
       'news-feed  ' 100px /
       1fr;
   }
-  .linknews
-    .friend-suggestion
-    .reccomended-courses
-    .whitespace
-    .whitespace1
-    .recent
-    .profile
-    .analytics {
+  .linknews .friend-suggestion,
+  .reccomended-courses,
+  .whitespace,
+  .whitespace1,
+  .recent,
+  .profile,
+  .analytics {
     display: none;
   }
 }
