@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header header header header" 5%
+    "toolbar inbox settings minitoolbar" 95% /
+    1fr 4fr 1fr 70px;
+  gap: 2px;
+}
+.header {
+  grid-area: header;
+  background-color: grey;
+}
+.toolbar {
+  grid-area: toolbar;
+  background-color: aqua;
+}
+
+.inbox {
+  grid-area: inbox;
+  background-color: yellow;
+}
+
+.settings {
+  grid-area: settings;
+  background-color: blue;
+}
+
+.minitoolbar {
+  grid-area: minitoolbar;
+  background-color: blueviolet;
+}
+@media screen and (max-width: 780px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template:
+      "header header header " 5%
+      "toolbar inbox settings " 95% /
+      1fr 4fr 1fr;
+    gap: 2px;
+  }
+  .minitoolbar {
+    display: none;
+  }
+}
