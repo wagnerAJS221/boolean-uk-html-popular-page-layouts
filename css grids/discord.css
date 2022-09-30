@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    'serverlist server-channels main-header' 50px
+    'serverlist server-channels main' 1fr /
+    60px 1fr 5fr;
+}
+
+.serverlist {
+  grid-area: serverlist;
+  background-color: rgb(55, 126, 241);
+}
+
+.server-channels {
+  grid-area: server-channels;
+  background-color: silver;
+}
+
+.main-header {
+  grid-area: main-header;
+  background-color: rgb(221, 18, 18);
+}
+.main {
+  grid-area: main;
+  background-color: rgb(218, 17, 195);
+}
